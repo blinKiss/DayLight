@@ -12,7 +12,7 @@ print(age2)
 # 내 친구의 이름, 나이, 몸무게
 # 리스트로 저장해서 출력
 myfriend = ['김유리', 37, 52]
-print('현재 내 친구 : {}'.format(myfriend))
+print('현재 : {}'.format(myfriend))
 
 
 mfname = '김유리' # 이름
@@ -28,7 +28,7 @@ fal.append(mfage)
 fwl.append(mfweight)
 
 mf = fnl + fal + fwl
-print('한희정 - 우리 처음 만난 날? : {}'.format(mf))
+print('과거 : {}'.format(mf))
 
 mf2name = ['김혜미']
 mf2age = [18] # 나이
@@ -38,4 +38,4 @@ mf2 = []
 mf2.extend(mf2name)
 mf2.extend(mf2age)
 mf2.extend(mf2weight)
-print('Acoustic Collabo - 설렘 가득 : {}'.format(mf2))
+print('과거 : {}'.format(mf2))
