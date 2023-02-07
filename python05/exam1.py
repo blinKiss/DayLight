@@ -1,4 +1,5 @@
 import urllib.request
+import urllib
 # import requests
 import re
 # re : <[Ii][Mm][Gg]\s+[^>]+>
@@ -27,10 +28,26 @@ for i in range(1, pLength):
 
 pattern = 'http.*.jpg'
 img_url = re.search(pattern, new).group()
-img_url_re = img_url.replace('편스토랑1', '%ED%8E%B8%EC%8A%A4%ED%86%A0%EB%9E%911')
+# img_url_re = img_url.replace('편스토랑1', '%ED%8E%B8%EC%8A%A4%ED%86%A0%EB%9E%911')
+# hangul = re.search('[가-힣]*[가-힣]', img_url).group()
+# # print(hangul)
+# url_encode = urllib.parse.quote(hangul)
+# img_url_encode = img_url.replace(hangul, url_encode)
+# print(img_url_encode)
+# img_save = 'newProduct.jpg'
+# urllib.request.urlretrieve(img_url_encode, img_save)
+img_url_li = list(img_url)
+img_url_str = ''
+hangul = re.findall('[가-힣]', img_url)
+
+for j in img_url_li:
+    for k in hangul: 
+        if(j == k):
+            j = urllib.parse.quote(j)
+    img_url_str += j
+print(img_url_str)
 img_save = 'newProduct.jpg'
-print(img_url)
-urllib.request.urlretrieve(img_url_re, img_save)
+urllib.request.urlretrieve(img_url_str, img_save)
 
 # 선생님 답
 # text='<div class="img"><img src="http://kbsart.co.kr/data/onlinedata/국군의날 1.png" alt="[행사] 제73주년 국군의 날 이미지"></div>'
