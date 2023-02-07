@@ -14,15 +14,17 @@ start_title = html_data.find('<a href="#" class="select_btn">패션의류</a>')
 temp1 = html_data[start_title:start_title+50]
 mat = re.search('<a.*/a>', temp1)
 title = re.sub('<.+?>', '', mat.group())
-print('인기분야 :',title)
 
-start_date = html_data.find('<div class="keyword_carousel">')
-end_date = html_data.find('<div class="keyword_notice">')
-temp2 = html_data[start_date:end_date]
+
+start_data = html_data.find('<div class="keyword_carousel">')
+end_data = html_data.find('<div class="keyword_notice">')
+temp2 = html_data[start_data:end_data]
 latest = temp2.split('<div class="keyword_rank">')[-1]
-# print(latestDay)
+print(latest)
 Len = len(latest.split('<li class="list">'))
 # print(Len)
+latestDay = re.sub('<.+?>', '', re.search('<span class="title_cell".*/span>', latest.split('<strong class="rank_title".*/strong>')[0]).group())
+print('{}\n인기분야 : {}'.format(latestDay, title))
 
 for i in range(1,Len):
     rank_num = re.sub('<.+?>', '', re.search('<em class="num".*/em>', latest.split('<li class="list">')[i]).group())
