@@ -49,8 +49,8 @@ print('등수 = '+num2)
 # for j in li:
 #     print(j)
 
-for i in range(1, Len):
-    print('{}위 : '.format(re.sub('<.+?>', '', re.search('<span class="num_rank".*/span>', temp3.split('<li>')[i]).group())) + re.sub('<.+?>', '', re.search('<span class="txt_rank".*/span>', temp3.split('<li>')[i]).group()))
+# for i in range(1, Len):
+#     print('{}위 : '.format(re.sub('<.+?>', '', re.search('<span class="num_rank".*/span>', temp3.split('<li>')[i]).group())) + re.sub('<.+?>', '', re.search('<span class="txt_rank".*/span>', temp3.split('<li>')[i]).group()))
 
 for j in range(1, Len):
     rn = re.search('<span class="num_rank".*/span>', temp3.split('<li>')[j]).group()
