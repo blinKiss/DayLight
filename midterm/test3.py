@@ -9,8 +9,8 @@ html_data = res.text
 start = html_data.find('홈')
 end = html_data.find('6위 ~ 10위')
 st_en = html_data[start:end]
-devide = st_en.split('<li data-testid="BEST_ITEM_KEYWORD"')
-# print(len(devide))
-for i in range(1, len(devide)):
-    object_name = re.sub('<.+?>', '', re.search('</em>.*cQZC_">', devide[i]).group())
+divide = st_en.split('<li data-testid="BEST_ITEM_KEYWORD"')
+# print(len(divide))
+for i in range(1, len(divide)):
+    object_name = re.sub('<.+?>', '', re.search('</em>.*cQZC_">', divide[i]).group())
     print(i, object_name)

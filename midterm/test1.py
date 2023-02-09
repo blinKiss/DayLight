@@ -4,7 +4,9 @@
 # 60이상 학점 D
 # 60~64 D 65이상 D+
 # 나머지 F
-score = int(input('점수를 입력하세요 : '))
+eng = 75
+# score = int(input('점수를 입력하세요 : '))
+score = eng
 grade = ''
 
 if(score >= 90):
