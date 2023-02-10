@@ -27,6 +27,6 @@ for j in range(len(soup_list)):
     hangul = re.search('[가-힣]*[가-힣]', soup_list[j]).group()
     encode = urllib.parse.quote(hangul)
     soup_list[j] = re.sub(' ', '%20', re.sub('[가-힣]*[가-힣]', encode, soup_list[j]))
-    print(soup_list[j], img_save[j])
-    # urllib.request.urlretrieve(soup_list[j], img_save[j])
+    # print(soup_list[j], img_save[j])
+    urllib.request.urlretrieve(soup_list[j], img_save[j])
 
