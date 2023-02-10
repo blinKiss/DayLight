@@ -2,9 +2,9 @@ from bs4 import BeautifulSoup
 
 html_data = '''
 <ul>
-    <li><a href="../board/view.php?bdId=notice&sno=11">[NOTICE]&nbsp;2023 설 연휴 고객센터 ...</a></li>
-    <li><a href="../board/view.php?bdId=notice&sno=10">[NOTICE]&nbsp;2023.01.02~04 배...</a></li>
-    <li><a href="../board/view.php?bdId=notice&sno=9">[NOTICE]&nbsp;쏠초 프라이데이 이벤트 안내</a></li>
+    <li class="first"><a href="../board/view.php?bdId=notice&sno=11">[NOTICE]&nbsp;2023 설 연휴 고객센터 ...</a></li>
+    <li id="demo" class="second"><a href="../board/view.php?bdId=notice&sno=10">[NOTICE]&nbsp;2023.01.02~04 배...</a></li>
+    <li class="third"><a href="../board/view.php?bdId=notice&sno=9">[NOTICE]&nbsp;쏠초 프라이데이 이벤트 안내</a></li>
     <li><a href="../board/view.php?bdId=notice&sno=8">[NOTICE]&nbsp;카카오톡 고객상담 불가 안내</a></li>
     <li><a href="../board/view.php?bdId=notice&sno=7">[NOTICE]&nbsp;추석 연휴 배송 일정 안내</a></li>
     <li><a href="../board/view.php?bdId=notice&sno=6">[NOTICE]&nbsp;배송비 인상 안내 (9월부터...</a></li>
@@ -15,5 +15,11 @@ html_data = '''
 </ul>
 '''
 
-soup = BeautifulSoup(html_data, 'html.parser').prettify()
-print(soup)
+soup = BeautifulSoup(html_data, 'html.parser')
+print(soup.li)
+print(soup.li['class'])
+soup.li['class'] = 'test'
+
+print(soup.a)
+print(soup.a['href'])
+
