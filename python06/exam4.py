@@ -12,14 +12,16 @@ soup = BeautifulSoup(txt_data, 'html.parser')
 # soup_temp = []
 
 # for i in range(len(soup.find_all('img'))):
-    # soup_temp.append(soup.select('img')[i]['src'])
+    # soup_temp.append(soup.select('img')[i]['src']) # ['src'] = .get('src')
 
 # print(soup_temp)
 # soup_list = soup_temp[3:6]
 
-soup_list = []
-for i in range(3, 6):
-    soup_list.append(soup.select('img')[i]['src'])
+# soup_list = []
+# for i in range(3, 6):
+#     soup_list.append(soup.select('img')[i]['src'])
+# 위에꺼 줄임
+soup_list = [soup.select('img')[i]['src'] for i in range(3,6)]
 
 
 img_save = ['kbs1.jpg', 'kbs2.png', 'kbs3.png']
