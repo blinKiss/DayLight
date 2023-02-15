@@ -18,4 +18,4 @@ try:
 except Exception as e:
     print('에러 발생')
 finally:
-    browser.close
+    browser.close()

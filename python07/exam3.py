@@ -24,4 +24,4 @@ try:
 except Exception as e:
     print('에러 내용 : ', str(e))
 finally:
-    browser.close
+    browser.close()

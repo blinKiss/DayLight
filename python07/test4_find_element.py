@@ -17,5 +17,5 @@ except Exception as e:
     # 에러 처리 후
     print('에러 발생')
 finally:
-    browser.close
+    browser.close()
     
