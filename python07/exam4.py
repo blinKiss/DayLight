@@ -28,5 +28,5 @@ except Exception as e:
 finally:
     browser.close()
 
-while(True):
-    pass
+# while(True):
+#     pass

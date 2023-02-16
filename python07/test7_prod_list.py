@@ -23,7 +23,7 @@ try:
     # print(soup.prettify())
     prod_list = soup.select('.prdList .name')
     prod_temp = soup.select('.xans-product-listitem span')
-    # print(len(prod_temp))
+    # print(prod_temp)
     prod_price = prod_temp[1:len(prod_temp):3]
     # print(prod_price)
     for i in range(len(prod_list)):
