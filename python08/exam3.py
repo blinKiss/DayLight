@@ -18,4 +18,5 @@ df = pd.DataFrame({
 df['sale_price'] = ['₩' + str(format(round((i*1.2)), ',')) for i in df['prod_price']]
 df['prod_price'] = ['₩' + str(format(i, ',')) for i in df['prod_price']]
 
+
 print(df)
