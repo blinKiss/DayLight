@@ -17,16 +17,9 @@ print('가장 마지막 행 데이터 추가 :', df.loc[len(df)-1], '\n')
 print('300번째 영화제목 출력 :', df.loc[300, 'Film'], '\n')
 df.drop(index = [300], axis = 0, inplace=True)
 # 400번째 rating값에 -5하여 수정
-print('400번째 행 :', df.loc[400], '\n')
+print('400번째 행 :', '\n', df.loc[400], '\n')
 # df.loc[400, ('RottenTomatoesRatings', 'AudienceRatings')] = 61, 73
-upd_rott = df.loc[400, 'RottenTomatoesRatings'] - 5
-upd_audi = df.loc[400, 'AudienceRatings'] - 5
-df.loc[400, ('RottenTomatoesRatings', 'AudienceRatings')] = upd_rott, upd_audi
-print('400번째 행 레이팅 값 수정', df.loc[400])
+upd = df.loc[400, 'RottenTomatoesRatings'] - 5, df.loc[400, 'AudienceRatings'] - 5
+df.loc[400, ('RottenTomatoesRatings', 'AudienceRatings')] = upd
+print('400번째 행 레이팅 값 수정 :','\n', df.loc[400])
 
-
-# print(df)
-
-
-# print(df.loc[0:1])
-# print(df.loc[:3, 'LAST_NAME']) # 행과 열이름 동시에 만족하는 값

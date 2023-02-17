@@ -30,7 +30,7 @@ elif(score >= 60):
     else:
         grade = 'D'  
 else:
-    grade = 'D'
+    grade = 'F'
     
 
 print('당신의 학점은 {} 입니다'.format(grade))
