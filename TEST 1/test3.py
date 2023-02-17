@@ -10,16 +10,10 @@ end_rank = txt_data.find('src="https://i0.wp.com/autobuff.co.kr/wp-content/uploa
 temp = txt_data[start_rank:end_rank]
 # rankh2 = re.findall('<h2.*/h2>', temp)
 # rankp = re.findall('<p.*/p>', temp)
-rank = re.findall('[0-9]+[가-힣][.][\s][가-힣]*[\s][가-힣]*', temp)
+rank = re.findall('[0-9]+[가-힣][.].*[(]', temp)
 # print(rank)
 for i in rank:
-    print(i)
-
-
-
-
-
-
+    print(re.sub('[(]', '', i))
 
 
 
