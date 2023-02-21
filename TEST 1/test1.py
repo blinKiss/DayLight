@@ -12,7 +12,7 @@
 #         grade = 'D'  
 #     else:
 #         grade = 'F'
-#     print('{}님의 학점은 {} 입니다'.format(st_name[i], grade))
+#     print('{} 님의 학점은 {} 입니다'.format(st_name[i], grade))
     
     
     
@@ -23,11 +23,11 @@ grades = ['F', 'D', 'C', 'B', 'A']
 err = '점수는 100 이하의 값이어야 합니다'
 for name, score in zip(st_name, st_score):
     if score > 100 or score < 0:
-        print('{}님의 점수가 올바르지 않아 학점은 {} 입니다'.format(name, grades[0]))
+        print('{} 님의 점수가 올바르지 않아 학점은 {} 입니다'.format(name, grades[0]))
         continue
     
     if score < 60:
         grade = grades[0]
     else:
         grade = grades[min(score//10 -5, 4)]
-    print('{}님의 학점은 {} 입니다'.format(name, grade))
+    print('{} 님의 학점은 {} 입니다'.format(name, grade))
