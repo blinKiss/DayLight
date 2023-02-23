@@ -13,10 +13,10 @@ df_total_view = df_total[['상호명', '상권업종중분류명']]
 df_bakery = df_total_view[df_total_view['상권업종중분류명'] == '제과제빵떡케익']
 # print(df_bakery)
 
-df_bakery_paris = df_bakery[df_bakery['상호명'].str.contains('파리')]
-df_bakery_tous = df_bakery[df_bakery['상호명'].str.contains('뚜레')]
+paris = df_bakery[df_bakery['상호명'].str.contains('파리')]
+tous = df_bakery[df_bakery['상호명'].str.contains('뚜레')]
 
-if((df_bakery_paris.shape[0] > df_bakery_tous.shape[0]) == True):
+if((paris.shape[0] > tous.shape[0]) == True):
     print('빠바가 더 많음')
 else:
     print('뚜쥬가 더 많음')
