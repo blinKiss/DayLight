@@ -12,15 +12,18 @@ df_total = pd.concat([df1, df2, df3, df4, df5])
 # print('서울, 경기, 인천, 광주, 부산 내 총 가게 수 : ', df_total.shape[0])
 # print(df1.head(n=5))
 # print(df1.columns)
-df_total_view = df_total[['상호명', '지점명', '상권업종대분류명', '상권업종중분류명']]
+df_total_view = df_total[['상호명', '지점명', '상권업종대분류명', '상권업종중분류명', '시도명']]
 print(df_total_view)
 df_cafe = df_total_view[df_total_view['상권업종중분류명'] == '커피점/카페']
 # print('5대도시 카페 수 :', df_cafe.shape[0])
 df_cafe_ediya = df_cafe[df_cafe['상호명'].str.contains('이디야')]
 df_cafe_ediya.index = range(len(df_cafe_ediya))
+print('5대 도시 이디야 매장 수 :', df_cafe_ediya.shape[0])
 # print(df_cafe_ediya.head(n=20))
 # print('5대 도시 이디야 매장 수 :', df_cafe_ediya.shape[0])
 
-
-
+city = sorted(set(df_total_view['시도명']))
+print(city)
+cntpercity = [len(df_cafe_ediya[df_cafe_ediya['시도명'] == c]) for c in city]
+print(cntpercity)
 
