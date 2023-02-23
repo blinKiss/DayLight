@@ -20,4 +20,3 @@ if((paris.shape[0] > tous.shape[0]) == True):
     print('빠바가 더 많음')
 else:
     print('뚜쥬가 더 많음')
-
