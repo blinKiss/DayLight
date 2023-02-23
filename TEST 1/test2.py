@@ -1,6 +1,6 @@
 word = ['해바라기', '나팔꽃', '장미', '무궁화', '코스모스', '접시꽃', '선인장', '제비꽃', '국화', '에델바이스']
 word_dict = {len(i): [] for i in word}
-print(word_dict)
+# print(word_dict)
 for j in word:
     word_dict[len(j)].append(j)
 
