@@ -8,5 +8,3 @@ df_slice = df[['은행코드', '점포명', '주소', '전화번호']]
 df_woori = df_slice[df_slice['점포명'].str.contains('우리.*은행')]
 print(df_woori)
 
-
-
