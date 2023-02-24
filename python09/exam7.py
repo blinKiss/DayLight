@@ -1,10 +1,9 @@
 import pandas as pd
 
-df = pd.read_excel('./data/period.xlsx')
-df_re = df.fillna(0)
+df = pd.read_excel('./data/period.xlsx').fillna(0)
 # 미세먼지 평균, 분산, 초미세먼지 평균, 분산
 # print(df.columns)
-city_list = df_re[['Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3']]
+city_list = df[['Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3']]
 city_slice = city_list[5:len(city_list)]
 city_slice.columns = ['자치구', '미세먼지', '초미세먼지']
 temp = city_slice[(city_slice['자치구'].str.contains('평균'))].index
@@ -12,15 +11,15 @@ city_slice2 = city_slice.drop(temp)
 # print(temp)
 
 # print(city_slice)
-city_duplicate = city_slice2['자치구'].unique()
-city = sorted( city_duplicate )
+cities = city_slice2['자치구'].unique()
+city = sorted( cities )
 # print(city)
 city_sort = [(city_slice2[city_slice2['자치구'] == c]) for c in city]
 # print(type(city_slice))
 # print(city_slice.head(n=10))
 # print(city_sort)
-print(city_sort[11]['미세먼지'].values.mean())
-print('기록된 서울시 지역구별 미세먼지\n')
+# print(city_sort[11]['미세먼지'].values.mean())
+print('기록된 서울시 지역별 미세먼지\n')
 for c in range(0, len(city_sort)):
     print('{}의 미세먼지 평균 : {}, 분산 : {}, 초미세먼지 평균 : {}, 분산 {}\n'.
         format(city[c],
