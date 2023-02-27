@@ -37,8 +37,7 @@ for i in range(len(name)):
     sum = student_score.sum(axis=1)[i]
     avg = round(student_score.mean(axis=1)[i])
     var = round(student_score.var(axis=1)[i])
-    print('{}님의 3과목 합계 : {}, 평균 : {}, 분산 : {}'.
-          format(name[i], sum, avg, var))
+    print(f'{name[i]}님의 3과목 합계 : {sum}, 평균 : {avg}, 분산 : {var}')
 
 
 

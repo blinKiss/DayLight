@@ -12,3 +12,16 @@ data/소상공인시장진흥공단_상가(상권)정보_전남_202212.csv
 data/서울시 지하철 호선별 역별 시간대별 승하차 인원 정보.csv
 data/billboard.csv
 data/2020_0918_company_list.csv
+data/small_biz/소상공인시장진흥공단_상가(상권)정보_제주_202212.csv
+data/small_biz/소상공인시장진흥공단_상가(상권)정보_경기_202212.csv
+data/small_biz/소상공인시장진흥공단_상가(상권)정보_광주_202212.csv
+data/small_biz/소상공인시장진흥공단_상가(상권)정보_대구_202212.csv
+data/small_biz/소상공인시장진흥공단_상가(상권)정보_대전_202212.csv
+data/small_biz/소상공인시장진흥공단_상가(상권)정보_부산_202212.csv
+data/small_biz/소상공인시장진흥공단_상가(상권)정보_서울_202212.csv
+data/small_biz/소상공인시장진흥공단_상가(상권)정보_세종_202212.csv
+data/small_biz/소상공인시장진흥공단_상가(상권)정보_울산_202212.csv
+data/small_biz/소상공인시장진흥공단_상가(상권)정보_인천_202212.csv
+data/small_biz/소상공인시장진흥공단_상가(상권)정보_전남_202212.csv
+data/download/gas.csv
+data/download/train.csv
