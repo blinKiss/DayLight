@@ -19,7 +19,7 @@ city_sort = [(city_slice2[city_slice2['자치구'] == c]) for c in city]
 # print(city_slice.head(n=10))
 # print(city_sort)
 # print(city_sort[11]['미세먼지'].values.mean())
-print('기록된 서울시 지역별 미세먼지\n')
+print('기록된 서울시 자치구별 미세먼지\n')
 for c in range(0, len(city_sort)):
     print('{}의 미세먼지 평균 : {}, 분산 : {}, 초미세먼지 평균 : {}, 분산 {}\n'.
         format(city[c],
