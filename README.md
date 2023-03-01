@@ -1,2 +1,2 @@
-# DayLight
-비밀
+# 6
+Python 2
