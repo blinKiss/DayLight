@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_excel('./data/period.xlsx').fillna(0)
+df = pd.read_excel('./DayLight/data/period.xlsx').fillna(0)
 # 미세먼지 평균, 분산, 초미세먼지 평균, 분산
 # print(df.columns)
 city_list = df[['Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3']]
