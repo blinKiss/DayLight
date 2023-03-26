@@ -11,7 +11,3 @@ rank.sort()
 rank.append(rank.pop(0))
 for i in rank:
     print(i)
-
-
-
-
